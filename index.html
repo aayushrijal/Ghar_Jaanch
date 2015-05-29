@@ -6,7 +6,9 @@
     <title>Ghar Jaanch</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/normalize.css" />    
+    <link rel="stylesheet" href="css/normalize.css" />
+	<script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
     <script src="js/vendor/modernizr.js"></script>
     <script src="js/foundation/foundation.magellan.js"></script>
     <script src="js/foundation/foundation.orbit.js"></script>
@@ -67,23 +69,25 @@
     	<div class="columns large-6 right">
         	<a href="#" class="button radius small makePost">Make a post</a>
       	</div>
-    	<div class="columns large-12 text-center post-card">
-    		<h2><div class="columns medium-4 text-center postTitleImg"><img src="img/1.jpg" width="300" /></div></h2>
-    		<h2><div class="columns medium-4 left postTitle">भित्ता चर्केको।</div></h2>
-    		<div class="columns medium-4 right postID">#0001</div>
-    		<div class="columns medium-8 left description">mero ghar ko bhitta lastai charkeko cha, k garne hola hey prabhu!!! maile ghar ta darro banako ho tara bhagya ni kasto daiba ko prakop rokera ni narokine!!</div>
-    		<div class="columns medium-8 post-bottom">
-    			<div class="columns medium-4 location">Imadole-15</div>
-    			<div class="columns medium-4 sticker"><img src="img/asdas"/></div>
+		<div id="list">
+    			<div class="columns large-12 text-center post-card">
+				<h2><div class="columns medium-4 text-center postTitleImg"><img src="img/1.jpg" width="300" /></div></h2>
+				<h2><div class="columns medium-4 left postTitle"	>भित्ता चर्केको।</div></h2>
+				<div class="columns medium-4 right postID">#0001</div>
+				<div class="columns medium-8 left description">mero ghar ko bhitta lastai charkeko cha, k garne hola hey prabhu!!! maile ghar ta darro banako ho tara bhagya ni kasto daiba ko prakop rokera ni narokine!!</div>
+					<div class="columns medium-8 post-bottom">
+						<div class="columns medium-4 location">Imadole-15</div>
+						<div class="columns medium-4 sticker"><img src="img/asdas"/></div>
+					</div>
     		</div>
-    	</div>
+			</div>
+	
     </div>
  	<!--end of posts-->
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
+     <script>
       $(document).foundation();
     </script>
+<script src="js/index.js"></script>
   </body>
 </html>
