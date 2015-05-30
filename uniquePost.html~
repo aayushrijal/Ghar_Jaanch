@@ -7,14 +7,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <script type="text/javascript" src="js/vendor/jquery.js"></script> <script type="text/javascript" src="js/foundation/foundation.js"></script>   <script src="js/foundation/foundation.clearing.js"></script>
-<style>
-	  #map-canvas {
-        height: 100%;
-	width:50%;
-        margin: 0px;
-        padding: 0px
-      }
-    </style>
 </head>
 <body>
 	<header class="homeheader">
@@ -25,7 +17,7 @@
 	<div class="whitetxt">a
 	</div>
 	<div class="row content_center content_tray uniquepost">
-		<div class="column medium-9 left main_img"></div>
+		<div class="column medium-6 left main_img"><img src="img/experts.png" width="400"></div>
 		<h2><div class="column medium-6 left title-hold">घर जाँच</div></h2>
 		<h5><div class="column medium-6 left">30 May 2015, Kalimati, Kathmandu</div></h5>
 		<h4><div class="column medium-6 left">sampurna bibaran yaha samahit gariyeko cha</div></h4>
@@ -43,7 +35,6 @@
 			</form>
 		</div>
 	</div>
-	<div id="map-canvas">Hello</div>
 
 	<!--ul class="clearing-thumbs" data-clearing>
 	  <li><a href="img/1.jpg"><img src="img/experts.png"></a></li>
@@ -52,25 +43,6 @@
 	</ul-->
 <script type="text/javascript">
 	$(document).foundation();
-</script>
- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script type="text/javascript">
-    		var map,t1;
-var myLatlng = new google.maps.LatLng(28.05259082333986,84.1552734375);
-function initialize() {
-  		map = new google.maps.Map(document.getElementById('map-canvas'), {
-    	mapTypeId: google.maps.MapTypeId.TERRAIN,	
-   		 zoom:9,
-    	center: {lat: 28.05259082333986, lng: 84.1552734375}
-		  });
-	var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-	  icon: 'img/green_marker.png',
-      title: 'Hello World!'
-  });
-	}
-google.maps.event.addDomListener(window, 'load', initialize);
 </script>	
 </body>
 </html>
