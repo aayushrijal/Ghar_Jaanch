@@ -12,6 +12,11 @@ header{
 	border-bottom: 1px solid #5FCF80;
 	background: #fff !important;
 }
+.boldtxt{
+	font-weight: bold;
+	font-size: 18px;
+	color: #456;
+}
 .whitetxt{
 	color: #fff;
 }
@@ -70,10 +75,10 @@ header{
 }
 
 .home-title{
-	background: #5FCF80;
+	background: #4CBA7C;
 }
 .home-info{
-	background: #4CBA7C;
+	background: #5FCF80;
 }
 .home-quote{
 	background: #7FD999;
@@ -135,7 +140,7 @@ header{
 	text-align: center;
 }
 .main_img{
-
+	display: block;
 }
 .uniquepost{
 	border: 1px solid #ccc;
@@ -146,4 +151,7 @@ ul.photo_post{
 li.img_list{
 	list-style: none;
 	display: inline;
+}
+.commentButton{
+	padding: 10px 0;
 }
