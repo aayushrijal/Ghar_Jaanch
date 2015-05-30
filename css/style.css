@@ -162,3 +162,10 @@ li.img_list{
 .commentButton{
 	padding: 10px 0;
 }
+.loginForm{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow:2px 2px 3px #ccc;
+	padding: 20px;
+	margin-top: 100px;
+}
