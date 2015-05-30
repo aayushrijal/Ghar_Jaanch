@@ -27,7 +27,9 @@
 			$yearbuilt = $row['yearbuilt'];
 			$location = $row['location'];
 			$coordinates = $row['coordinates'];
-		}		
+		}
+
+		
 		$outputarray['id'] = $id;
 		$outputarray['title'] = $title;
 		$outputarray['houseSystem'] = $houseSystem;
@@ -86,6 +88,20 @@
 		$outputarray["p$count"] = $imagearray["p$count"];
 		$count++;
 		}
+
+
+/* FOR THE FLAG */
+
+		$sql = "SELECT AVG(flag) FROM blog where id ='$houseid';";
+		$retval = mysql_query($sql,$conn);
+		if( !$retval ){
+			echo "ERROR!!!!! ";
+		}
+		while( $row = mysql_fetch_array($retval,MYSQL_ASSOC)){
+			$flag = $row['AVG(flag)'];
+		}
+		$outputarray['flag'] = $flag;
+ 
 
 		$json_output = json_encode($outputarray);
 		echo $json_output;		
