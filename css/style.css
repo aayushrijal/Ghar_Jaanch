@@ -10,6 +10,7 @@ div, header, section {
 }
 header{
 	border-bottom: 1px solid #5FCF80;
+	background: #fff !important;
 }
 .whitetxt{
 	color: #fff;
@@ -30,12 +31,13 @@ header{
 	text-decoration: none;
 	color: #344;
 	font-size: 20px;
+	background: #fff !important;
 }
 
 .homeheader {
 	position: fixed;
 	width: 100%;
-	z-index: 1000;
+	z-index: 1;
 	padding: 30px 0 0 0;
 	font-size: 12px;
 	color: #344;
