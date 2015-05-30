@@ -138,3 +138,10 @@ header{
 .uniquepost{
 	border: 1px solid #ccc;
 }
+ul.photo_post{
+	padding: 30px 0;
+} 
+li.img_list{
+	list-style: none;
+	display: inline;
+}
