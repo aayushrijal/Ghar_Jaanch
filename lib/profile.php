@@ -10,7 +10,9 @@
                         echo "ERROR: ERROR IN CONNECTION";
                 }
                 mysql_select_db("Ghar");
-	
+
+/*FOR THE INFORMATION
+*/	
 		$sql = "SELECT * FROM profile WHERE engineer_id = '$eid';";
 		
 		$retval = mysql_query($sql,$conn);
@@ -31,6 +33,20 @@
 		$outputarray['experience'] = $experience;
 		$outputarray['contact'] = $contact;
 		$outputarray['eid'] = $eid;
+
+/* FOR THE photo
+*/
+		$sql = "SELECT * FROM photo where pid = '$eid';";
+		$retval = mysql_query($sql,$conn);
+		if( !$retval){
+			echo "ERROR:";
+		}
+		while( $row = mysql_fetch_array($retval,MYSQL_ASSOC) ){
+			$image = $row['filename'];
+		}
+		$outputarray['image'] = $image;
+
+
 
 		$json_output = json_encode($outputarray);
 		
