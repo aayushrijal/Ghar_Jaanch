@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Integrity Test</title>
+<meta charset='UTF-8' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<style>
+	html,body{
+        height: 100%;
+	margin: 0px;
+        padding: 0px
+      }
+     	 
+      #map-canvas {
+        height: 100%;
+	width:100%;
+        margin: 0px;
+        padding: 0px
+      }
+    #info-box {
+      background-color: white;
+      border: 1px solid black;
+      bottom: 30px;
+      min-height: 20px;
+      padding: 10px;
+      position: absolute;
+      left: 30px;
+    }
+    </style>
+<script src="js/vendor/jquery.js"></script>
+
+</head>
+<body>
+<div id="map-canvas"></div>
+<script>
+
+</script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript">
+var loc;
+			var a =[["Kathmandu,Nepal",0],["Bhaktapur,Nepal",1],["Gorkha,Nepal",2],["Sunsari,Nepal",3]]
+    		var map,t1;
+var myLatlng = new google.maps.LatLng(28.05259082333986,84.1552734375);
+function initialize() {
+		var cloc,marker;
+		var geocoder = new google.maps.Geocoder();
+  		map = new google.maps.Map(document.getElementById('map-canvas'), {
+    	mapTypeId: google.maps.MapTypeId.TERRAIN,	
+   		 zoom: 7,
+    	center: {lat: 28.05259082333986, lng: 84.1552734375}
+		  });
+	for(i=0;i<3;i++){
+		
+		geocoder.geocode({
+						"address": a[i][0]
+							}, function(results) {	
+																			loc=results[0].geometry.location;
+																			cloc=new google.maps.LatLng(loc.A,loc.F); //LatLng
+																			var ico=Math.floor((Math.random() * 3) + 1);;
+																			switch(ico){
+																		case 0:
+																			ico="img/white_marker.png";
+																			break;
+																		case 1:
+																			ico="img/red_marker.png";
+																			break;
+																		case 2:
+																			ico="img/yellow_marker.png";
+																			break;
+																		case 3:
+																			ico="img/green_marker.png";
+																			break;
+																	}
+																				marker = new google.maps.Marker({
+															  					position: cloc,
+															  					map: map,
+																				  icon: ico,
+															  					title: 'Hello World!'
+														  	});
+					});
+		
+	}
+	}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</body>
+</html>

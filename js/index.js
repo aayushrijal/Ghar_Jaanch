@@ -33,6 +33,35 @@ var info
 		}
 		});
 })();
-
+function power(){
+	$.ajax({
+                    url: "lib/get_house.php?id="+$(".search_id").val(),
+				    dataType: 'json',
+                    type: 'GET',
+		success:function(data){
+				$("#list").html(" ");
+				console.log(data);
+				var a='<h2><div class="columns medium-4 text-center postTitleImg"><img src="lib/uploads/'+data["p1"]+'" width="300" /></div></h2>';
+				var b='<h2><div class="columns medium-4 left postTitle">'+data["title"]+'</div></h2>';
+				var c='<div class="columns medium-4 right postID">'+data["id"]+'</div>';
+				var d='<div class="columns medium-8 left description">'+data["description"]+'</div>';
+				var e='<div class="columns medium-8 post-bottom"><div class="columns medium-4 location">'+data["location"]+'<div><div class="columns medium-4 sticker"><img src="img/green_marker.png" /></div></div>';
+				switch(1){
+					case 0:
+						colr="grey";
+						break;
+					case 1:
+						colr="red";
+						break;
+					case 2:
+						colr="yellow";
+						break;
+					case 3:
+						break;
+				}
+			$("#list").append($('<div>').html(a+b+c+d+e).addClass("columns large-12 text-center post-card").css('border-left-color',colr));
+}
+});
+}
 
 
