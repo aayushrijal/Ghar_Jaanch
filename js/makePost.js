@@ -1,18 +1,18 @@
 $("#post").click(function(){
 $.ajax({
-                    url: "input_data.php",
+                    url: "lib/input_data.php",
                     data: {
-						"title"=$("#right-label").value,
-						"houseSytem"= $('input[name="system"]:checked').value;
-						"noofstoreys"=$('select').value;
-						"Description"=$("#desc").value;
-						"location"=$("#locate").value;
-						"yearbuilt"=2050;
+						"title":$("#right-label").value,
+						"houseSytem": $('input[name="system"]:checked').value,
+						"noofstoreys":$('select').value,
+						"Description":$("#desc").value,
+						"location":$("#locate").value,
+						"yearbuilt":2050
 						},
                     dataType: 'json',
-                    type: 'POST',
+                    type: 'GET',
 		success:function(data){
-					$.ajax({
+					/*$.ajax({
 						url:"photoupload.php",
 						data:{
 							"id"=data.id;
@@ -21,13 +21,14 @@ $.ajax({
 							"file3"=$("#f3").value;
 							"file4"=$("#f4").value;
 							"file5"$("#f5").value;*/
-							}
+							/*}
 						dataType:'json',
 						type:'POST',
 						success:function(data){
 							alert("Photo Upload Successful");
 							}					
-		});
+		});*/
+alert("Hello");
 }
 });
 });
