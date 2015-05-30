@@ -119,3 +119,22 @@ header{
 .form{
 	padding-top: 10em;
 }
+.content_center{
+	margin: 0 auto;
+	float: none;
+}
+.content_tray{
+	margin-top: 130px;
+	padding: 20px;
+}
+.title-hold{
+}
+.text_center{
+	text-align: center;
+}
+.main_img{
+
+}
+.uniquepost{
+	border: 1px solid #ccc;
+}
